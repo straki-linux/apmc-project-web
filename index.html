@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="no-js">
 
 <head>
     <meta charset="utf-8">
@@ -41,9 +41,8 @@
     <link rel="stylesheet" href="css/custom.css">
 
     <script src="js/vendor/modernizr-custom.js"></script>
-    <!-- jQuery en HTTPS (le http:// était bloqué par les navigateurs sur un site en https) et chargé avant contact.js -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="js/contact.js"></script>
+    <!-- jQuery 1.11 retiré : compressed.js embarque déjà jQuery 3.3.1, qui le remplaçait de toute façon -->
+    <script src="js/contact.js" defer></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6EHCMC91XN"></script>
@@ -95,7 +94,7 @@
             </div>
         </div>
         <!-- header toggler -->
-        <span class="toggle_menu" role="button" tabindex="0" aria-label="Ouvrir le menu"><span></span></span>
+        <span class="toggle_menu" role="button" tabindex="0" aria-label="Ouvrir le menu" aria-expanded="false"><span></span></span>
     </header>
 
     <main id="contenu">
@@ -176,7 +175,7 @@
                     <div class="col-md-4">
                         <div class="icon-box text-center">
                             <h3 class="text-uppercase counter-wrap color-main4">
-                                <span class="counter" data-from="0" data-to="2593" data-speed="1500">2593</span>
+                                <span class="counter" data-from="0" data-to="2593" data-speed="1500">0</span>
                             </h3>
                             <p class="small-text">Clients heureux</p>
                         </div>
@@ -184,7 +183,7 @@
                     <div class="col-md-4">
                         <div class="icon-box text-center">
                             <h3 class="text-uppercase counter-wrap color-main4">
-                                <span class="counter" data-from="0" data-to="2764" data-speed="1500">2764</span>
+                                <span class="counter" data-from="0" data-to="2764" data-speed="1500">0</span>
                             </h3>
                             <p class="small-text">Chiens éduqués</p>
                         </div>
@@ -192,7 +191,7 @@
                     <div class="col-md-4">
                         <div class="icon-box text-center">
                             <h3 class="text-uppercase counter-wrap color-main4">
-                                <span class="counter" data-from="0" data-to="22" data-speed="1500">22</span>
+                                <span class="counter" data-from="0" data-to="22" data-speed="1500">0</span>
                             </h3>
                             <p class="small-text">Années d'expérience</p>
                         </div>
@@ -336,6 +335,14 @@
                     e.preventDefault();
                     el.click();
                 }
+            });
+            // main.js ajoute la classe mobile-active : on reflète l'état pour les lecteurs d'écran
+            el.addEventListener('click', function () {
+                setTimeout(function () {
+                    var open = el.classList.contains('mobile-active');
+                    el.setAttribute('aria-expanded', open ? 'true' : 'false');
+                    el.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+                }, 0);
             });
         });
     </script>

@@ -17,8 +17,13 @@ doivent être ajoutés au dépôt avec les mêmes chemins :
 
 - **Corrections** : balise `<html lang="fr">` manquante, `</ul>` du menu non fermé,
   balise cassée `<div">` dans les partenaires.
-- **jQuery en HTTPS** : l'ancien lien `http://` était bloqué par les navigateurs
-  sur un site en `https`. jQuery est maintenant chargé avant `contact.js`.
+- **jQuery en double supprimé** : la page chargeait jQuery 1.11 depuis Google (en
+  `http://`, donc bloqué en `https`) alors que `js/compressed.js` contient déjà
+  jQuery 3.3.1, qui le remplaçait aussitôt. Une requête et une vieille version de
+  jQuery en moins ; `contact.js` est chargé en `defer`.
+- **Sans JavaScript** : classe `no-js` sur `<html>` (Modernizr la retire), ce qui
+  active les règles de secours déjà prévues par le thème (premier visuel affiché,
+  écran de chargement masqué).
 - **`button.js`** chargé en chemin relatif (fonctionne aussi en local).
 - **Référencement** : titre et meta description, balises Open Graph (aperçu lors
   d'un partage), données structurées `LocalBusiness`, URL canonique, un vrai `<h1>`.
