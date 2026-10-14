@@ -49,13 +49,29 @@ plugins. Elle n'utilise que :
 - **Performance** : une seule feuille de style et un seul script (contre six
   fichiers CSS/JS auparavant), images chargées en différé.
 
+## Pages intérieures
+
+Les quatre pages du menu ont maintenant le même design : même en-tête, mêmes
+couleurs, même pied de page avec l'adresse, le téléphone, l'email, Instagram et
+Facebook. Elles utilisent toutes `css/site.css` et `js/site.js`.
+
+- **`fondateur.html` (Qui suis-je ?)** : Emmanuel Lamy, éducateur canin. Elle
+  reprend le texte d'origine, la photo et le badge « La passion · La qualité ·
+  Le sérieux », les liens Instagram @eduquermonchien, Facebook et Instagram
+  @madein.shaina, l'appel à l'action et les partenaires.
+- **`nos-services.html`** : le texte d'introduction, les 6 services (liens vers
+  leurs pages détaillées) et les 3 avis clients, avec les initiales à la place
+  des photos.
+- **`contact.html`** : l'adresse, le téléphone et l'email (cliquables), les
+  horaires, les réseaux sociaux et une carte Google Maps de l'adresse.
+
 ## Fichiers nécessaires
 
 Ces fichiers du site existant doivent être présents avec les mêmes chemins :
 
 - `images/` : `logo1.jpg`, `ACCUEIL2.jpg`, `ACCUEIL3.jpg`,
   `partners/01–04.jpg`, `partners/05–06.png` ;
-- autres pages : `fondateur.html`, `nos-services.html`, `contact.html`.
-
-Ces trois pages utilisent encore l'ancien thème (`css/main.css`, `js/compressed.js`…).
-Elles peuvent être refaites avec `css/site.css` sur le même modèle.
+- les pages de détail des services, toujours dans l'ancien thème :
+  `cours-individuels-d-education-canine.html`, `education-en-ville.html`,
+  `rappel-au-maitre.html`, `problemes-comportementaux.html`,
+  `sorties-quotidiennes.html`, `alimentation.html`.
