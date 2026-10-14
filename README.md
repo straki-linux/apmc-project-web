@@ -37,8 +37,7 @@ plugins. Elle n'utilise que :
    @eduquermonchien.
 8. **Partenaires** : bandeau « Nos partenaires » qui défile sur toutes les pages,
    avec les logos de `images/partners/` : Purina Dog Chow, Purina Pro Plan,
-   Belcando, Made In Shaïna et The Canny Company. Leonardo est affiché en texte
-   en attendant le fichier de son logo.
+   Belcando, Leonardo, Made In Shaïna et The Canny Company.
 9. **Pied de page** : liens, Instagram et copyright.
 
 ### Qualité
@@ -107,10 +106,9 @@ peuvent garder l'ancienne version en cache.
 
 ## Fichiers
 
-Toutes les images utilisées sont dans le dépôt (`images/`). Il reste deux choses
-hors du dépôt :
+Toutes les images utilisées sont dans le dépôt (`images/`). Il reste hors du
+dépôt :
 
-- le logo Leonardo, à ajouter dans `images/partners/` ;
 - les pages de détail des services, toujours dans l'ancien thème :
   `cours-individuels-d-education-canine.html`, `education-en-ville.html`,
   `rappel-au-maitre.html`, `problemes-comportementaux.html`,
