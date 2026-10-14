@@ -1,0 +1,128 @@
+/* APMC Éducation Canine – scripts du site (sans dépendance) */
+(function () {
+    'use strict';
+
+    document.documentElement.classList.add('js');
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var header = document.querySelector('[data-header]');
+        var toggle = document.querySelector('[data-nav-toggle]');
+        var nav = document.querySelector('[data-nav]');
+
+        // En-tête opaque après défilement
+        function onScroll() {
+            header.classList.toggle('is-scrolled', window.scrollY > 30);
+        }
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive: true });
+
+        // Menu mobile
+        function setMenu(open) {
+            toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+            nav.classList.toggle('is-open', open);
+            header.classList.toggle('is-open', open);
+        }
+        toggle.addEventListener('click', function () {
+            setMenu(toggle.getAttribute('aria-expanded') !== 'true');
+        });
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && nav.classList.contains('is-open')) {
+                setMenu(false);
+                toggle.focus();
+            }
+        });
+
+        // Diaporama du héro (fondu entre les photos)
+        var slides = document.querySelectorAll('.hero-img');
+        if (slides.length > 1 && !reduceMotion) {
+            var current = 0;
+            setInterval(function () {
+                slides[current].classList.remove('is-active');
+                current = (current + 1) % slides.length;
+                slides[current].classList.add('is-active');
+            }, 6500);
+        }
+
+        // Compteurs animés + apparition au défilement
+        function animateCount(el) {
+            var target = parseInt(el.getAttribute('data-count'), 10);
+            var start = null;
+            var duration = 1600;
+            function step(ts) {
+                if (!start) start = ts;
+                var p = Math.min((ts - start) / duration, 1);
+                var eased = 1 - Math.pow(1 - p, 3);
+                el.textContent = Math.round(target * eased);
+                if (p < 1) requestAnimationFrame(step);
+            }
+            requestAnimationFrame(step);
+        }
+
+        var counters = document.querySelectorAll('[data-count]');
+        var reveals = document.querySelectorAll('.reveal');
+
+        if ('IntersectionObserver' in window) {
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (!entry.isIntersecting) return;
+                    var el = entry.target;
+                    if (el.hasAttribute('data-count')) {
+                        if (!reduceMotion) animateCount(el);
+                    } else {
+                        el.classList.add('is-visible');
+                    }
+                    io.unobserve(el);
+                });
+            }, { threshold: 0.2 });
+            counters.forEach(function (el) { io.observe(el); });
+            reveals.forEach(function (el) { io.observe(el); });
+        } else {
+            reveals.forEach(function (el) { el.classList.add('is-visible'); });
+        }
+
+        // Bandeau des partenaires qui défile (liste dupliquée pour une boucle continue)
+        var track = document.querySelector('[data-marquee]');
+        if (track && !reduceMotion) {
+            var copy = track.firstElementChild.cloneNode(true);
+            copy.setAttribute('aria-hidden', 'true');
+            copy.querySelectorAll('img').forEach(function (img) { img.alt = ''; });
+            track.appendChild(copy);
+            track.classList.add('is-animated');
+        }
+
+        // Visionneuse de la galerie
+        var box = document.querySelector('[data-lightbox]');
+        var links = Array.prototype.slice.call(document.querySelectorAll('[data-gallery] a'));
+        if (box && typeof box.showModal === 'function' && links.length) {
+            var img = box.querySelector('[data-lightbox-img]');
+            var index = 0;
+            function show(i) {
+                index = (i + links.length) % links.length;
+                img.src = links[index].getAttribute('href');
+                img.alt = links[index].querySelector('img').alt;
+            }
+            links.forEach(function (link, i) {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    show(i);
+                    box.showModal();
+                });
+            });
+            box.querySelector('[data-lightbox-close]').addEventListener('click', function () { box.close(); });
+            box.querySelector('[data-lightbox-prev]').addEventListener('click', function () { show(index - 1); });
+            box.querySelector('[data-lightbox-next]').addEventListener('click', function () { show(index + 1); });
+            box.addEventListener('click', function (e) { if (e.target === box) box.close(); });
+            box.addEventListener('keydown', function (e) {
+                if (e.key === 'ArrowLeft') show(index - 1);
+                if (e.key === 'ArrowRight') show(index + 1);
+            });
+            box.addEventListener('close', function () { links[index].focus(); });
+        }
+
+        // Année du copyright
+        document.querySelectorAll('[data-year]').forEach(function (el) {
+            el.textContent = new Date().getFullYear();
+        });
+    });
+})();

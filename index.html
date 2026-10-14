@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="fr" class="no-js">
+<html lang="fr">
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>APMC Éducation Canine – Éducateur canin professionnel</title>
     <meta name="description" content="APMC Éducation Canine, éducateur canin professionnel : plus de 22 ans d'expérience et des milliers de chiens éduqués. Découvrez nos services d'éducation canine et contactez-nous.">
+    <meta name="theme-color" content="#0a272c">
     <link rel="canonical" href="https://www.apmc.fr/">
 
     <!-- Partage sur les réseaux sociaux -->
@@ -32,18 +33,12 @@
     }
     </script>
 
-    <link rel="preconnect" href="https://www.googletagmanager.com">
-    <link rel="preload" as="image" href="images/ACCUEIL3.jpg">
-
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/font-awesome.css">
-    <link rel="stylesheet" href="css/main.css" class="color-switcher-link">
-    <link rel="stylesheet" href="css/custom.css">
-
-    <script src="js/vendor/modernizr-custom.js"></script>
-    <!-- jQuery 1.11 retiré : compressed.js embarque déjà jQuery 3.3.1, qui le remplaçait de toute façon -->
-    <script src="js/contact.js" defer></script>
+    <link rel="icon" href="images/logo1.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="css/site.css">
+    <script src="js/site.js" defer></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6EHCMC91XN"></script>
@@ -59,302 +54,189 @@
 <body>
     <a class="skip-link" href="#contenu">Aller au contenu</a>
 
-    <div class="preloader">
-        <div class="preloader_image pulse"></div>
-    </div>
+    <!-- En-tête -->
+    <header class="site-header" data-header>
+        <div class="container header-inner">
+            <a href="index.html" class="brand" aria-label="APMC Éducation Canine – accueil">
+                <img src="images/logo1.jpg" alt="" width="52" height="52">
+                <span class="brand-text">APMC <small>Éducation Canine</small></span>
+            </a>
 
-    <!-- Header -->
-    <header class="page_header header_logo_center ls bg-maincolor4 justify-nav-center">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-10 col-md-12 text-center">
-                    <div class="logo_wrapper">
-                        <a href="index.html" class="logo logo-ds">
-                            <img src="images/logo1.jpg" alt="APMC Éducation Canine – retour à l'accueil">
-                        </a>
-                    </div>
-                    <!-- main nav start -->
-                    <nav class="top-nav" aria-label="Navigation principale">
-                        <ul class="nav sf-menu">
-                            <li class="active">
-                                <a href="index.html" aria-current="page">Accueil</a>
-                            </li>
-                            <li>
-                                <a href="fondateur.html">Qui suis-je ?</a>
-                            </li>
-                            <li>
-                                <a href="nos-services.html">Nos Services</a>
-                            </li>
-                            <li>
-                                <a href="contact.html">Contact</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <!-- eof main nav -->
-                </div>
-            </div>
+            <button class="nav-toggle" type="button" aria-controls="menu" aria-expanded="false" data-nav-toggle>
+                <span class="sr-only">Menu</span>
+                <span class="nav-toggle-bar" aria-hidden="true"></span>
+            </button>
+
+            <nav class="site-nav" id="menu" aria-label="Navigation principale" data-nav>
+                <ul>
+                    <li><a href="index.html" aria-current="page">Accueil</a></li>
+                    <li><a href="fondateur.html">Qui suis-je ?</a></li>
+                    <li><a href="nos-services.html">Nos services</a></li>
+                    <li><a href="contact.html" class="btn btn-primary btn-sm">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <!-- header toggler -->
-        <span class="toggle_menu" role="button" tabindex="0" aria-label="Ouvrir le menu" aria-expanded="false"><span></span></span>
     </header>
 
     <main id="contenu">
-        <h1 class="sr-only">APMC Éducation Canine – éducateur canin professionnel</h1>
-
-        <!-- Carrousel d'accueil -->
-        <section class="page_slider home_slider" aria-label="Présentation">
-            <div class="flexslider vertical">
-                <ul class="slides">
-                    <li class="ds s-overlay cover-image text-center">
-                        <img src="images/ACCUEIL3.jpg" alt="Un chien et son propriétaire lors d'une séance d'éducation canine">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="intro_layers_wrapper intro_text_bottom">
-                                        <div class="intro_layers">
-                                            <div class="intro-layer">
-                                                <h3>Des milliers de chiens et leurs propriétaires</h3>
-                                            </div>
-                                            <div class="intro-layer">
-                                                <h2>Nous font confiance</h2>
-                                            </div>
-                                            <div class="intro-layer hidden-below-sm mt-22">
-                                                <p>
-                                                    Le choix d'un dresseur pour votre chien est important et soyez assuré que nous ferons tout notre possible pour répondre au mieux à vos besoins.
-                                                </p>
-                                            </div>
-                                            <div class="divider-xl-55"></div>
-                                            <div class="divider-30 hidden-xl"></div>
-                                            <div class="intro-layer buttons-layer d-flex flex-wrap">
-                                                <a href="contact.html" class="btn btn-maincolor">Contactez-nous</a>
-                                                <a href="nos-services.html" class="btn btn-outline-maincolor">Plus de détails</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="ds s-overlay cover-image text-center">
-                        <img src="images/ACCUEIL2.jpg" alt="Séance avec un éducateur canin professionnel" loading="lazy">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="intro_layers_wrapper intro_text_bottom">
-                                        <div class="intro_layers">
-                                            <div class="intro-layer">
-                                                <h3>Éducateur canin</h3>
-                                            </div>
-                                            <div class="intro-layer">
-                                                <h2>Professionnel</h2>
-                                            </div>
-                                            <div class="intro-layer hidden-below-sm mt-22">
-                                                <p>
-                                                    Nous proposons une variété de services adaptés à vos besoins et à ceux de votre chien.
-                                                </p>
-                                            </div>
-                                            <div class="divider-xl-55"></div>
-                                            <div class="divider-30 hidden-xl"></div>
-                                            <div class="intro-layer buttons-layer d-flex flex-wrap">
-                                                <a href="contact.html" class="btn btn-maincolor">Contactez-nous</a>
-                                                <a href="nos-services.html" class="btn btn-outline-maincolor">Plus de détails</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+        <!-- Héro -->
+        <section class="hero" aria-labelledby="titre-hero">
+            <div class="hero-media">
+                <img class="hero-img is-active" src="images/ACCUEIL3.jpg" alt="" fetchpriority="high">
+                <img class="hero-img" src="images/ACCUEIL2.jpg" alt="" loading="lazy">
+            </div>
+            <div class="container hero-content">
+                <p class="eyebrow">Éducateur canin professionnel</p>
+                <h1 id="titre-hero">Des milliers de chiens et leurs propriétaires <em>nous font confiance</em></h1>
+                <p class="hero-lead">Le choix d'un dresseur pour votre chien est important et soyez assuré que nous ferons tout notre possible pour répondre au mieux à vos besoins.</p>
+                <div class="hero-actions">
+                    <a href="contact.html" class="btn btn-primary">Contactez-nous</a>
+                    <a href="nos-services.html" class="btn btn-ghost">Découvrir nos services</a>
+                </div>
             </div>
         </section>
 
-        <!-- Quelques statistiques -->
-        <section id="progress" class="section-progress ds s-overlay s-parallax s-py-5 s-py-md-10 s-py-xl-30" aria-label="APMC Éducation Canine en chiffres">
+        <!-- Chiffres clés -->
+        <section class="stats" id="chiffres" aria-label="APMC Éducation Canine en chiffres">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="icon-box text-center">
-                            <h3 class="text-uppercase counter-wrap color-main4">
-                                <span class="counter" data-from="0" data-to="2593" data-speed="1500">0</span>
-                            </h3>
-                            <p class="small-text">Clients heureux</p>
-                        </div>
+                <div class="stats-grid">
+                    <div class="stat">
+                        <p class="stat-value"><span data-count="2593">2593</span></p>
+                        <p class="stat-label">Clients heureux</p>
                     </div>
-                    <div class="col-md-4">
-                        <div class="icon-box text-center">
-                            <h3 class="text-uppercase counter-wrap color-main4">
-                                <span class="counter" data-from="0" data-to="2764" data-speed="1500">0</span>
-                            </h3>
-                            <p class="small-text">Chiens éduqués</p>
-                        </div>
+                    <div class="stat">
+                        <p class="stat-value"><span data-count="2764">2764</span></p>
+                        <p class="stat-label">Chiens éduqués</p>
                     </div>
-                    <div class="col-md-4">
-                        <div class="icon-box text-center">
-                            <h3 class="text-uppercase counter-wrap color-main4">
-                                <span class="counter" data-from="0" data-to="22" data-speed="1500">0</span>
-                            </h3>
-                            <p class="small-text">Années d'expérience</p>
-                        </div>
+                    <div class="stat">
+                        <p class="stat-value"><span data-count="22">22</span></p>
+                        <p class="stat-label">Années d'expérience</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Raccourcis vers les pages du site -->
-        <section class="ls s-py-60 s-py-md-90 home-links" aria-labelledby="titre-decouvrir">
+        <!-- Découvrir -->
+        <section class="section" aria-labelledby="titre-decouvrir">
             <div class="container">
-                <div class="row">
-                    <div class="col-12 text-center">
-                        <h2 id="titre-decouvrir">Découvrir APMC Éducation Canine</h2>
-                        <p class="home-links__intro">Le choix d'un éducateur pour votre chien est important. Voici où trouver tout ce qu'il faut savoir.</p>
-                    </div>
+                <div class="section-head">
+                    <p class="eyebrow eyebrow-dark">APMC Éducation Canine</p>
+                    <h2 id="titre-decouvrir">Une éducation adaptée à vous et à votre chien</h2>
+                    <p>Le choix d'un éducateur pour votre chien est important. Voici où trouver tout ce qu'il faut savoir.</p>
                 </div>
-                <div class="row home-links__grid">
-                    <div class="col-md-4">
-                        <a href="fondateur.html" class="home-card">
-                            <i class="fa fa-user" aria-hidden="true"></i>
-                            <h3>Qui suis-je ?</h3>
-                            <p>Mon parcours et ma façon de travailler avec vous et votre chien.</p>
-                            <span class="home-card__more">En savoir plus <i class="fa fa-angle-right" aria-hidden="true"></i></span>
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="nos-services.html" class="home-card">
-                            <i class="fa fa-paw" aria-hidden="true"></i>
-                            <h3>Nos services</h3>
-                            <p>Une variété de services adaptés à vos besoins et à ceux de votre chien.</p>
-                            <span class="home-card__more">Voir les services <i class="fa fa-angle-right" aria-hidden="true"></i></span>
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="contact.html" class="home-card">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                            <h3>Contact</h3>
-                            <p>Une question, un projet pour votre chien ? Écrivez-nous.</p>
-                            <span class="home-card__more">Nous contacter <i class="fa fa-angle-right" aria-hidden="true"></i></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Galerie de photos -->
-        <section class="ds ms c-gutter-0 container-px-0" aria-label="Galerie photos">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-sm-12 text-center">
-                        <div class="owl-carousel small-gallery-carousel" data-items="1" data-margin="0" data-responsive-lg="5" data-responsive-md="4" data-responsive-sm="3" data-responsive-xs="2" data-nav="false" data-loop="true" data-autoplay="true">
-                            <a href="images/square/5.jpg" class="photoswipe-link" data-width="600" data-height="600"><img src="images/square/5.jpg" alt="Photo de chien – galerie APMC 1" width="600" height="600" loading="lazy"></a>
-                            <a href="images/square/14.jpg" class="photoswipe-link" data-width="600" data-height="600"><img src="images/square/14.jpg" alt="Photo de chien – galerie APMC 2" width="600" height="600" loading="lazy"></a>
-                            <a href="images/square/12.jpg" class="photoswipe-link" data-width="600" data-height="600"><img src="images/square/12.jpg" alt="Photo de chien – galerie APMC 3" width="600" height="600" loading="lazy"></a>
-                            <a href="images/square/11.jpg" class="photoswipe-link" data-width="600" data-height="600"><img src="images/square/11.jpg" alt="Photo de chien – galerie APMC 4" width="600" height="600" loading="lazy"></a>
-                            <a href="images/square/15.jpg" class="photoswipe-link" data-width="600" data-height="600"><img src="images/square/15.jpg" alt="Photo de chien – galerie APMC 5" width="600" height="600" loading="lazy"></a>
-                            <a href="images/square/1.jpg" class="photoswipe-link" data-width="600" data-height="600"><img src="images/square/1.jpg" alt="Photo de chien – galerie APMC 6" width="600" height="600" loading="lazy"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Appel à l'action -->
-        <section class="ds s-py-60 s-py-md-90 text-center home-cta" aria-labelledby="titre-cta">
-            <div class="container">
-                <h2 id="titre-cta">Parlons de votre chien</h2>
-                <p>Nous ferons tout notre possible pour répondre au mieux à vos besoins.</p>
-                <div class="divider-30"></div>
-                <div class="home-cta__buttons">
-                    <a href="contact.html" class="btn btn-maincolor">Contactez-nous</a>
-                    <a href="https://www.instagram.com/eduquermonchien/" class="btn btn-outline-maincolor" target="_blank" rel="noopener">
-                        <i class="fa fa-instagram" aria-hidden="true"></i> Suivez-nous sur Instagram
+                <div class="cards">
+                    <a href="fondateur.html" class="card reveal">
+                        <span class="card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+                        </span>
+                        <h3>Qui suis-je ?</h3>
+                        <p>Mon parcours et ma façon de travailler avec vous et votre chien.</p>
+                        <span class="card-link">En savoir plus <span aria-hidden="true">→</span></span>
+                    </a>
+                    <a href="nos-services.html" class="card reveal">
+                        <span class="card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><circle class="fill" cx="5" cy="10" r="2"/><circle class="fill" cx="9" cy="5.5" r="2"/><circle class="fill" cx="15" cy="5.5" r="2"/><circle class="fill" cx="19" cy="10" r="2"/><path class="fill" d="M12 11c-3 0-6 4.2-6 6.8C6 20 7.7 21 9.5 21c1 0 1.7-.5 2.5-.5s1.5.5 2.5.5c1.8 0 3.5-1 3.5-3.2 0-2.6-3-6.8-6-6.8z"/></svg>
+                        </span>
+                        <h3>Nos services</h3>
+                        <p>Une variété de services adaptés à vos besoins et à ceux de votre chien.</p>
+                        <span class="card-link">Voir les services <span aria-hidden="true">→</span></span>
+                    </a>
+                    <a href="contact.html" class="card reveal">
+                        <span class="card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+                        </span>
+                        <h3>Contact</h3>
+                        <p>Une question, un projet pour votre chien ? Écrivez-nous.</p>
+                        <span class="card-link">Nous contacter <span aria-hidden="true">→</span></span>
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- Partenaires -->
-        <section id="partners" class="ls s-py-0 s-py-md-0 container-px-xl-0 partners-section" aria-label="Nos partenaires">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="owl-carousel" data-loop="true" data-margin="30" data-nav="false" data-dots="false" data-center="false" data-items="1" data-autoplay="true" data-responsive-xs="2" data-responsive-sm="3" data-responsive-md="4" data-responsive-lg="7">
-                            <div>
-                                <img src="images/partners/01.jpg" alt="Logo partenaire 1" loading="lazy">
-                            </div>
-                            <div>
-                                <img src="images/partners/02.jpg" alt="Logo partenaire 2" loading="lazy">
-                            </div>
-                            <div>
-                                <img src="images/partners/03.jpg" alt="Logo partenaire 3" loading="lazy">
-                            </div>
-                            <div>
-                                <img src="images/partners/04.jpg" alt="Logo partenaire 4" loading="lazy">
-                            </div>
-                            <div>
-                                <img src="images/partners/05.png" alt="Logo partenaire 5" loading="lazy">
-                            </div>
-                            <div>
-                                <img src="images/partners/06.png" alt="Logo partenaire 6" loading="lazy">
-                            </div>
-                        </div>
+        <!-- Galerie -->
+        <section class="section section-alt" aria-labelledby="titre-galerie">
+            <div class="container">
+                <div class="section-head">
+                    <p class="eyebrow eyebrow-dark">En images</p>
+                    <h2 id="titre-galerie">Nos chiens à l'honneur</h2>
+                </div>
+                <ul class="gallery" data-gallery>
+                    <li><a href="images/square/5.jpg"><img src="images/square/5.jpg" alt="Photo de chien – galerie APMC 1" width="600" height="600" loading="lazy"></a></li>
+                    <li><a href="images/square/14.jpg"><img src="images/square/14.jpg" alt="Photo de chien – galerie APMC 2" width="600" height="600" loading="lazy"></a></li>
+                    <li><a href="images/square/12.jpg"><img src="images/square/12.jpg" alt="Photo de chien – galerie APMC 3" width="600" height="600" loading="lazy"></a></li>
+                    <li><a href="images/square/11.jpg"><img src="images/square/11.jpg" alt="Photo de chien – galerie APMC 4" width="600" height="600" loading="lazy"></a></li>
+                    <li><a href="images/square/15.jpg"><img src="images/square/15.jpg" alt="Photo de chien – galerie APMC 5" width="600" height="600" loading="lazy"></a></li>
+                    <li><a href="images/square/1.jpg"><img src="images/square/1.jpg" alt="Photo de chien – galerie APMC 6" width="600" height="600" loading="lazy"></a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Appel à l'action -->
+        <section class="cta" aria-labelledby="titre-cta">
+            <div class="container">
+                <div class="cta-inner">
+                    <h2 id="titre-cta">Parlons de votre chien</h2>
+                    <p>Nous ferons tout notre possible pour répondre au mieux à vos besoins.</p>
+                    <div class="cta-actions">
+                        <a href="contact.html" class="btn btn-primary">Contactez-nous</a>
+                        <a href="https://www.instagram.com/eduquermonchien/" class="btn btn-ghost" target="_blank" rel="noopener">
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle class="fill" cx="17.5" cy="6.5" r="1.2"/></svg>
+                            @eduquermonchien
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Partenaires -->
+        <section class="partners" aria-label="Nos partenaires">
+            <div class="partners-track" data-marquee>
+                <ul>
+                    <li><img src="images/partners/01.jpg" alt="Logo partenaire 1" loading="lazy"></li>
+                    <li><img src="images/partners/02.jpg" alt="Logo partenaire 2" loading="lazy"></li>
+                    <li><img src="images/partners/03.jpg" alt="Logo partenaire 3" loading="lazy"></li>
+                    <li><img src="images/partners/04.jpg" alt="Logo partenaire 4" loading="lazy"></li>
+                    <li><img src="images/partners/05.png" alt="Logo partenaire 5" loading="lazy"></li>
+                    <li><img src="images/partners/06.png" alt="Logo partenaire 6" loading="lazy"></li>
+                </ul>
+            </div>
+        </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="page_copyright ds s-py-5">
-        <div class="container border-top-color">
-            <div class="row align-items-center">
-                <div class="divider-20 d-none d-lg-block"></div>
-                <div class="divider-10 d-none d-md-block d-lg-none"></div>
-                <div class="col-md-12 text-center">
-                    <nav aria-label="Liens du pied de page">
-                        <ul class="footer-links">
-                            <li><a href="index.html">Accueil</a></li>
-                            <li><a href="fondateur.html">Qui suis-je ?</a></li>
-                            <li><a href="nos-services.html">Nos Services</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </nav>
-                    <p class="footer-social">
-                        <a href="https://www.instagram.com/eduquermonchien/" class="fa fa-instagram" target="_blank" rel="noopener" aria-label="APMC Éducation Canine sur Instagram (@eduquermonchien)"></a>
-                    </p>
-                    <p>&copy; <span class="copyright_year">2026</span> APMC Éducation Canine – Tous droits réservés</p>
-                </div>
-                <div class="divider-20 d-none d-lg-block"></div>
-                <div class="divider-10 d-none d-md-block d-lg-none"></div>
+    <!-- Pied de page -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-inner">
+                <a href="index.html" class="brand brand-light" aria-label="APMC Éducation Canine – accueil">
+                    <img src="images/logo1.jpg" alt="" width="46" height="46">
+                    <span class="brand-text">APMC <small>Éducation Canine</small></span>
+                </a>
+                <nav aria-label="Liens du pied de page">
+                    <ul class="footer-nav">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="fondateur.html">Qui suis-je ?</a></li>
+                        <li><a href="nos-services.html">Nos services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <a href="https://www.instagram.com/eduquermonchien/" class="social" target="_blank" rel="noopener" aria-label="APMC Éducation Canine sur Instagram (@eduquermonchien)">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle class="fill" cx="17.5" cy="6.5" r="1.2"/></svg>
+                </a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span data-year>2026</span> APMC Éducation Canine – Tous droits réservés</p>
             </div>
         </div>
     </footer>
 
-    <script src="js/compressed.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/button.js"></script>
-    <script>
-        // Année du copyright toujours à jour
-        document.querySelectorAll('.copyright_year').forEach(function (el) {
-            el.textContent = new Date().getFullYear();
-        });
-        // Menu mobile utilisable au clavier (Entrée / Espace)
-        document.querySelectorAll('.toggle_menu').forEach(function (el) {
-            el.addEventListener('keydown', function (e) {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    el.click();
-                }
-            });
-            // main.js ajoute la classe mobile-active : on reflète l'état pour les lecteurs d'écran
-            el.addEventListener('click', function () {
-                setTimeout(function () {
-                    var open = el.classList.contains('mobile-active');
-                    el.setAttribute('aria-expanded', open ? 'true' : 'false');
-                    el.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
-                }, 0);
-            });
-        });
-    </script>
+    <!-- Visionneuse de la galerie -->
+    <dialog class="lightbox" aria-label="Photo agrandie" data-lightbox>
+        <button type="button" class="lightbox-close" aria-label="Fermer" data-lightbox-close>×</button>
+        <button type="button" class="lightbox-prev" aria-label="Photo précédente" data-lightbox-prev>‹</button>
+        <img src="" alt="" data-lightbox-img>
+        <button type="button" class="lightbox-next" aria-label="Photo suivante" data-lightbox-next>›</button>
+    </dialog>
 </body>
 
 </html>

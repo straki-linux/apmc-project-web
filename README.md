@@ -2,48 +2,56 @@
 
 Site web d'**APMC Éducation Canine** (https://www.apmc.fr).
 
-## Structure attendue
+## Page d'accueil modernisée
 
-La page d'accueil (`index.html`) réutilise les fichiers du site existant, qui
-doivent être ajoutés au dépôt avec les mêmes chemins :
+`index.html` a été entièrement refaite avec un design moderne. Elle garde les
+textes, les photos, le logo et les couleurs du site d'origine (saumon `#ed8e82`,
+turquoise `#54c1c4`, bleu nuit `#0a272c`).
 
-- `css/` : `bootstrap.min.css`, `animations.css`, `font-awesome.css`, `main.css`
-  (+ `custom.css`, ajouté ici)
-- `js/` : `vendor/modernizr-custom.js`, `contact.js`, `compressed.js`, `main.js`, `button.js`
-- `images/` : `logo1.jpg`, `ACCUEIL2.jpg`, `ACCUEIL3.jpg`, `square/*.jpg`, `partners/*`
-- autres pages : `fondateur.html`, `nos-services.html`, `contact.html`
+Elle ne dépend plus de l'ancien thème : pas de Bootstrap, de jQuery ni de
+plugins. Elle n'utilise que :
 
-## Améliorations de la page d'accueil
+- `css/site.css` : la feuille de style de la page ;
+- `js/site.js` : un petit script sans dépendance, qui gère le menu mobile, le
+  fondu du héro, les compteurs, l'apparition au défilement, le bandeau des
+  partenaires, la visionneuse de la galerie et l'année du copyright ;
+- les polices Google Fonts Fraunces (titres) et Inter (texte) ;
+- Google Analytics (G-6EHCMC91XN), inchangé.
 
-- **Corrections** : balise `<html lang="fr">` manquante, `</ul>` du menu non fermé,
-  balise cassée `<div">` dans les partenaires.
-- **jQuery en double supprimé** : la page chargeait jQuery 1.11 depuis Google (en
-  `http://`, donc bloqué en `https`) alors que `js/compressed.js` contient déjà
-  jQuery 3.3.1, qui le remplaçait aussitôt. Une requête et une vieille version de
-  jQuery en moins ; `contact.js` est chargé en `defer`.
-- **Sans JavaScript** : classe `no-js` sur `<html>` (Modernizr la retire), ce qui
-  active les règles de secours déjà prévues par le thème (premier visuel affiché,
-  écran de chargement masqué).
-- **`button.js`** chargé en chemin relatif (fonctionne aussi en local).
-- **Référencement** : titre et meta description, balises Open Graph (aperçu lors
-  d'un partage), données structurées `LocalBusiness`, URL canonique, un vrai `<h1>`.
-- **Accessibilité** : textes alternatifs pour toutes les images, lien
-  « Aller au contenu », zones `<main>`/`<footer>`, menu mobile utilisable au
-  clavier, respect du réglage « réduire les animations ».
-- **Performance** : chargement différé des images (`loading="lazy"`),
-  préchargement de l'image principale, dimensions des images de la galerie.
-- **Fidèle au thème** : les titres du carrousel et des chiffres gardent exactement
-  les balises que `main.css` met en forme ; les nouvelles sections utilisent les
-  couleurs du thème (saumon `#ed8e82`, turquoise `#54c1c4`, bleu nuit `#0a272c`).
-- **Correctif CSS** : le `bootstrap.min.css` du site n'a pas de `margin-right: -15px`
-  sur `.row` (contenu légèrement décalé à gauche) ; corrigé dans `custom.css`.
-- **Instagram** : lien vers @eduquermonchien (pied de page, bandeau d'appel à l'action, données structurées `sameAs`).
-- **Contenu** : section « Découvrir » (Qui suis-je, Services, Contact),
-  appel à l'action « Parlons de votre chien », liens dans le pied de page,
-  année du copyright mise à jour automatiquement.
+### Sections
 
-## À vérifier
+1. **En-tête fixe** : il devient opaque au défilement. Sur mobile, un menu
+   s'ouvre avec le bouton ☰ et se ferme avec Échap.
+2. **Héro plein écran** : fondu entre `ACCUEIL3.jpg` et `ACCUEIL2.jpg`, avec le
+   titre « Des milliers de chiens et leurs propriétaires nous font confiance ».
+3. **Chiffres clés** : 2593 clients, 2764 chiens et 22 ans, animés à l'apparition.
+4. **Cartes** : Qui suis-je ?, Nos services et Contact.
+5. **Galerie** : les 6 photos `images/square/`, en mosaïque, qui s'agrandissent
+   au clic.
+6. **Appel à l'action** « Parlons de votre chien », avec le lien Instagram
+   @eduquermonchien.
+7. **Partenaires** : bandeau défilant.
+8. **Pied de page** : liens, Instagram et copyright.
 
-- `font-awesome.css` pointe vers des fichiers nommés `fontawesome-webfont﹖v=4.7.0.*`
-  (avec un « ﹖ » Unicode, reste d'une copie de site). Vérifier que les fichiers du
-  dossier `fonts/` portent bien ces noms, sinon les icônes ne s'affichent pas.
+### Qualité
+
+- **Référencement** : titre, meta description, Open Graph, données
+  structurées `LocalBusiness` (avec Instagram) et URL canonique.
+- **Accessibilité** : un seul `<h1>`, lien « Aller au contenu », textes
+  alternatifs, menu et visionneuse utilisables au clavier, focus visible, respect
+  du réglage « réduire les animations ».
+- **Sans JavaScript** : tout le contenu reste visible et les chiffres affichent
+  leur valeur finale.
+- **Performance** : une seule feuille de style et un seul script (contre six
+  fichiers CSS/JS auparavant), images chargées en différé.
+
+## Fichiers nécessaires
+
+Ces fichiers du site existant doivent être présents avec les mêmes chemins :
+
+- `images/` : `logo1.jpg`, `ACCUEIL2.jpg`, `ACCUEIL3.jpg`,
+  `square/{1,5,11,12,14,15}.jpg`, `partners/01–04.jpg`, `partners/05–06.png` ;
+- autres pages : `fondateur.html`, `nos-services.html`, `contact.html`.
+
+Ces trois pages utilisent encore l'ancien thème (`css/main.css`, `js/compressed.js`…).
+Elles peuvent être refaites avec `css/site.css` sur le même modèle.
