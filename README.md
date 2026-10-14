@@ -27,6 +27,17 @@ doivent être ajoutés au dépôt avec les mêmes chemins :
   clavier, respect du réglage « réduire les animations ».
 - **Performance** : chargement différé des images (`loading="lazy"`),
   préchargement de l'image principale, dimensions des images de la galerie.
+- **Fidèle au thème** : les titres du carrousel et des chiffres gardent exactement
+  les balises que `main.css` met en forme ; les nouvelles sections utilisent les
+  couleurs du thème (saumon `#ed8e82`, turquoise `#54c1c4`, bleu nuit `#0a272c`).
+- **Correctif CSS** : le `bootstrap.min.css` du site n'a pas de `margin-right: -15px`
+  sur `.row` (contenu légèrement décalé à gauche) ; corrigé dans `custom.css`.
 - **Contenu** : section « Découvrir » (Qui suis-je, Services, Contact),
   appel à l'action « Parlons de votre chien », liens dans le pied de page,
   année du copyright mise à jour automatiquement.
+
+## À vérifier
+
+- `font-awesome.css` pointe vers des fichiers nommés `fontawesome-webfont﹖v=4.7.0.*`
+  (avec un « ﹖ » Unicode, reste d'une copie de site). Vérifier que les fichiers du
+  dossier `fonts/` portent bien ces noms, sinon les icônes ne s'affichent pas.
