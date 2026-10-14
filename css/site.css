@@ -417,32 +417,64 @@ ul {
     position: absolute;
     inset: 0;
     background:
-        linear-gradient(90deg, rgba(18, 18, 18, .88) 0%, rgba(18, 18, 18, .55) 55%, rgba(18, 18, 18, .2) 100%),
-        linear-gradient(0deg, rgba(18, 18, 18, .6) 0%, transparent 40%);
+        linear-gradient(0deg, rgba(18, 18, 18, .55) 0%, rgba(18, 18, 18, .35) 50%, rgba(18, 18, 18, .55) 100%);
 }
 
+/* Texte centré, comme sur l'ancien site :
+   petite ligne, grand titre, trait, puis le texte et les boutons */
 .hero-content {
     position: relative;
     z-index: 1;
+    text-align: center;
+}
+
+.hero .eyebrow {
+    justify-content: center;
 }
 
 .hero h1 {
-    max-width: 14ch;
-    font-size: clamp(2.6rem, 6.5vw, 5rem);
+    margin: 0 0 1.75rem;
+    font-size: clamp(2.8rem, 8.5vw, 6.5rem);
+    line-height: 1;
     color: var(--white);
-    margin-bottom: 1.25rem;
 }
 
-.hero h1 em {
-    font-style: italic;
-    color: var(--accent);
+.hero-kicker {
+    display: block;
+    margin-bottom: .6rem;
+    font-family: var(--font-body);
+    font-size: clamp(1.15rem, 2.4vw, 2rem);
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+/* Petit trait sous le titre */
+.hero h1::after {
+    content: "";
+    display: block;
+    width: 96px;
+    height: 3px;
+    margin: 1.6rem auto 0;
+    background: var(--white);
 }
 
 .hero-lead {
-    max-width: 52ch;
-    font-size: clamp(1.05rem, 1.6vw, 1.25rem);
-    color: rgba(255, 255, 255, .88);
-    margin-bottom: 2.25rem;
+    max-width: 60ch;
+    margin: 0 auto 2.25rem;
+    font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+    color: rgba(255, 255, 255, .9);
+}
+
+.hero .hero-actions {
+    justify-content: center;
+}
+
+/* Sur téléphone, le petit trait devant « Éducateur canin professionnel » se
+   retrouverait seul quand le texte passe sur deux lignes */
+@media (max-width: 560px) {
+    .hero .eyebrow::before {
+        display: none;
+    }
 }
 
 .hero-actions,
