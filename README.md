@@ -5,8 +5,8 @@ Site web d'**APMC Éducation Canine** (https://www.apmc.fr).
 ## Page d'accueil modernisée
 
 `index.html` a été entièrement refaite avec un design moderne. Elle garde les
-textes, les photos, le logo et les couleurs du site d'origine (saumon `#ed8e82`,
-turquoise `#54c1c4`, bleu nuit `#0a272c`).
+textes, les photos et le logo du site d'origine. Les couleurs reprennent celles
+du logo : jaune `#f9b13a` sur noir `#121212`.
 
 Elle ne dépend plus de l'ancien thème : pas de Bootstrap, de jQuery ni de
 plugins. Elle n'utilise que :
@@ -26,8 +26,8 @@ plugins. Elle n'utilise que :
    titre « Des milliers de chiens et leurs propriétaires nous font confiance ».
 3. **Chiffres clés** : 2593 clients, 2764 chiens et 22 ans, animés à l'apparition.
 4. **Cartes** : Qui suis-je ?, Nos services et Contact.
-5. **Galerie** : les 6 photos `images/square/`, en mosaïque, qui s'agrandissent
-   au clic.
+5. **Galerie** : les 5 photos de chiens de `images/galerie/` (ajoutées au dépôt),
+   en mosaïque (une grande et quatre petites), qui s'agrandissent au clic.
 6. **Appel à l'action** « Parlons de votre chien », avec le lien Instagram
    @eduquermonchien.
 7. **Partenaires** : bandeau défilant.
@@ -50,7 +50,7 @@ plugins. Elle n'utilise que :
 Ces fichiers du site existant doivent être présents avec les mêmes chemins :
 
 - `images/` : `logo1.jpg`, `ACCUEIL2.jpg`, `ACCUEIL3.jpg`,
-  `square/{1,5,11,12,14,15}.jpg`, `partners/01–04.jpg`, `partners/05–06.png` ;
+  `partners/01–04.jpg`, `partners/05–06.png` ;
 - autres pages : `fondateur.html`, `nos-services.html`, `contact.html`.
 
 Ces trois pages utilisent encore l'ancien thème (`css/main.css`, `js/compressed.js`…).
