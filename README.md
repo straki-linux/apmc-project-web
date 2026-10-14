@@ -50,6 +50,18 @@ plugins. Elle n'utilise que :
 - **Performance** : une seule feuille de style et un seul script (contre six
   fichiers CSS/JS auparavant), images chargées en différé.
 
+## Logo
+
+Le logo APMC fourni est décliné en trois fichiers :
+
+- `images/logo-apmc-entete.png` : le chien à lunettes et le crayon, sur fond
+  transparent. Il est affiché en haut de page à côté du texte « APMC · Éducation
+  canine », écrit dans la police arrondie Quicksand, proche de celle du logo ;
+- `images/logo-apmc.png` : le logo complet, dans le pied de page et les données
+  pour Google ;
+- `images/favicon.png` : l'icône de l'onglet du navigateur et de l'écran
+  d'accueil du téléphone.
+
 ## Pages intérieures
 
 Les quatre pages du menu ont maintenant le même design : même en-tête, mêmes
@@ -70,7 +82,7 @@ Facebook. Elles utilisent toutes `css/site.css` et `js/site.js`.
 
 Ces fichiers du site existant doivent être présents avec les mêmes chemins :
 
-- `images/` : `logo1.jpg`, `ACCUEIL2.jpg`, `ACCUEIL3.jpg`,
+- `images/` : `ACCUEIL2.jpg`, `ACCUEIL3.jpg`,
   `partners/01–04.jpg`, `partners/05–06.png` ;
 - les pages de détail des services, toujours dans l'ancien thème :
   `cours-individuels-d-education-canine.html`, `education-en-ville.html`,
