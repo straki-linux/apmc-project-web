@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Transitions de page : repère les navigateurs sans transitions natives (ex. Firefox) -->
-    <script>if (!('onpagereveal' in window)) document.documentElement.classList.add('no-vt');</script>
+    <!-- Transitions de page : repère les navigateurs sans transitions natives (ex. Firefox) et l'ouverture en fichier local -->
+    <script>if (!('onpagereveal' in window) || location.protocol === 'file:') document.documentElement.classList.add('no-vt');</script>
     <title>APMC Éducation Canine – Éducateur canin professionnel</title>
     <meta name="description" content="APMC Éducation Canine, éducateur canin professionnel : plus de 22 ans d'expérience et des milliers de chiens éduqués. Découvrez nos services d'éducation canine et contactez-nous.">
     <meta name="theme-color" content="#121212">

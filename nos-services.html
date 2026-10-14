@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Transitions de page : repère les navigateurs sans transitions natives (ex. Firefox) -->
-    <script>if (!('onpagereveal' in window)) document.documentElement.classList.add('no-vt');</script>
+    <!-- Transitions de page : repère les navigateurs sans transitions natives (ex. Firefox) et l'ouverture en fichier local -->
+    <script>if (!('onpagereveal' in window) || location.protocol === 'file:') document.documentElement.classList.add('no-vt');</script>
     <title>Nos services – APMC Éducation Canine</title>
     <meta name="description" content="Cours individuels, éducation en ville, rappel, problèmes comportementaux, promenades, alimentation et matériel canin : les services d'APMC Éducation Canine.">
     <meta name="theme-color" content="#121212">

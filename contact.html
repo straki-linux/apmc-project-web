@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Transitions de page : repère les navigateurs sans transitions natives (ex. Firefox) -->
-    <script>if (!('onpagereveal' in window)) document.documentElement.classList.add('no-vt');</script>
+    <!-- Transitions de page : repère les navigateurs sans transitions natives (ex. Firefox) et l'ouverture en fichier local -->
+    <script>if (!('onpagereveal' in window) || location.protocol === 'file:') document.documentElement.classList.add('no-vt');</script>
     <title>Contact – APMC Éducation Canine</title>
     <meta name="description" content="Contactez APMC Éducation Canine à Châtenay-Malabry : 06 64 48 10 46, contact@apmc.fr. Du lundi au vendredi de 9h à 20h, le samedi de 10h à 19h.">
     <meta name="theme-color" content="#121212">
