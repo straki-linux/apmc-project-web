@@ -35,10 +35,10 @@ plugins. Elle n'utilise que :
    Qui suis-je.
 7. **Appel à l'action** « Parlons de votre chien », avec le lien Instagram
    @eduquermonchien.
-8. **Partenaires** : bandeau « Nos partenaires » qui défile sur toutes les pages.
-   Il affiche pour l'instant les noms (Purina Dog Chow, Purina Pro Plan,
-   Belcando, Leonardo, Made In Shaïna, The Canny Company). Les fichiers de leurs
-   logos restent à ajouter dans `images/partners/`.
+8. **Partenaires** : bandeau « Nos partenaires » qui défile sur toutes les pages,
+   avec les logos de `images/partners/` : Purina Dog Chow, Purina Pro Plan,
+   Belcando, Made In Shaïna et The Canny Company. Leonardo est affiché en texte
+   en attendant le fichier de son logo.
 9. **Pied de page** : liens, Instagram et copyright.
 
 ### Qualité
@@ -86,7 +86,7 @@ Facebook. Elles utilisent toutes `css/site.css` et `js/site.js`.
 Toutes les images utilisées sont dans le dépôt (`images/`). Il reste deux choses
 hors du dépôt :
 
-- les logos des partenaires, à ajouter dans `images/partners/` ;
+- le logo Leonardo, à ajouter dans `images/partners/` ;
 - les pages de détail des services, toujours dans l'ancien thème :
   `cours-individuels-d-education-canine.html`, `education-en-ville.html`,
   `rappel-au-maitre.html`, `problemes-comportementaux.html`,
