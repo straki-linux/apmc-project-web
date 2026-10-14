@@ -1227,99 +1227,53 @@ ul {
     }
 }
 
-/* ---------- Avis clients : un avis à la fois, qui défile à l'horizontale ---------- */
-
-.testimonials-slider {
-    max-width: 820px;
-    margin: 0 auto;
-}
+/* ---------- Avis clients ---------- */
 
 .testimonials {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-    border-radius: var(--radius);
-}
-
-.testimonials::-webkit-scrollbar {
-    display: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.75rem;
 }
 
 .testimonial {
-    flex: 0 0 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     margin: 0;
-    padding: 0 1.5rem;
-    text-align: center;
-    scroll-snap-align: center;
+    padding: 2.25rem 2rem;
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
 }
 
-/* Photo et nom au-dessus du texte, comme sur l'ancien site */
+.testimonial blockquote {
+    flex-grow: 1;
+    margin: 0 0 1.5rem;
+    font-size: 1.05rem;
+    color: var(--ink);
+}
+
+.testimonial blockquote::before {
+    content: "“";
+    display: block;
+    height: 2.4rem;
+    font-family: var(--font-display);
+    font-size: 4rem;
+    line-height: 1;
+    color: var(--accent);
+}
+
 .testimonial figcaption {
-    order: -1;
     display: flex;
     align-items: center;
     gap: .9rem;
-    margin-bottom: 1.25rem;
     font-weight: 600;
     color: var(--night);
-    text-align: left;
 }
 
 .testimonial figcaption small {
     display: block;
     font-weight: 400;
-    color: var(--accent-dark);
-}
-
-.testimonial blockquote {
-    margin: 0;
-    font-size: clamp(1.05rem, 2vw, 1.25rem);
-    line-height: 1.7;
-    color: var(--ink);
-}
-
-.testimonial blockquote::before,
-.testimonial blockquote::after {
-    color: var(--accent);
-    font-family: var(--font-display);
-    font-weight: 700;
-}
-
-.testimonial blockquote::before {
-    content: "« ";
-}
-
-.testimonial blockquote::after {
-    content: " »";
-}
-
-.slider-dots {
-    display: flex;
-    justify-content: center;
-    gap: .6rem;
-    margin-top: 1.75rem;
-}
-
-.slider-dots button {
-    width: 12px;
-    height: 12px;
-    padding: 0;
-    border: 0;
-    border-radius: 999px;
-    background: var(--line);
-    cursor: pointer;
-    transition: width .3s var(--ease), background-color .3s;
-}
-
-.slider-dots button[aria-current="true"] {
-    width: 32px;
-    background: var(--accent);
+    color: var(--muted);
 }
 
 .avatar {

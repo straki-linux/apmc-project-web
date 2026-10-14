@@ -125,46 +125,6 @@
             box.addEventListener('close', function () { links[index].focus(); });
         }
 
-        // Avis clients : un avis à la fois, points de navigation et défilement auto
-        document.querySelectorAll('[data-slider]').forEach(function (slider) {
-            var track = slider.querySelector('[data-slider-track]');
-            var dotsBox = slider.querySelector('[data-slider-dots]');
-            var slides = Array.prototype.slice.call(track.children);
-            if (slides.length < 2) return;
-            var current = 0;
-            var dots = slides.map(function (slide, i) {
-                var b = document.createElement('button');
-                b.type = 'button';
-                b.setAttribute('aria-label', 'Avis ' + (i + 1) + ' sur ' + slides.length);
-                b.addEventListener('click', function () { go(i); });
-                dotsBox.appendChild(b);
-                return b;
-            });
-            function mark(i) {
-                current = i;
-                dots.forEach(function (d, j) { d.setAttribute('aria-current', j === i ? 'true' : 'false'); });
-            }
-            function go(i) {
-                track.scrollTo({ left: i * track.clientWidth, behavior: reduceMotion ? 'auto' : 'smooth' });
-                mark(i);
-            }
-            // Glissé au doigt ou à la souris : le point suit l'avis affiché
-            track.addEventListener('scroll', function () {
-                var i = Math.round(track.scrollLeft / track.clientWidth);
-                if (i !== current && slides[i]) mark(i);
-            }, { passive: true });
-            mark(0);
-            if (reduceMotion) return;
-            var paused = false;
-            slider.addEventListener('mouseenter', function () { paused = true; });
-            slider.addEventListener('mouseleave', function () { paused = false; });
-            slider.addEventListener('focusin', function () { paused = true; });
-            slider.addEventListener('focusout', function () { paused = false; });
-            setInterval(function () {
-                if (!paused && !document.hidden) go((current + 1) % slides.length);
-            }, 7000);
-        });
-
         // Transitions de page de secours (navigateurs sans View Transitions entre
         // pages) : le contenu s'efface avant de suivre un lien interne
         var root = document.documentElement;
