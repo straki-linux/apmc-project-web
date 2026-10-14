@@ -30,7 +30,7 @@ plugins. Elle n'utilise que :
    « La passion · La qualité · Le sérieux » (`images/badge-valeurs.png`) et un
    lien vers `fondateur.html`, suivis des liens Instagram @eduquermonchien,
    Facebook et Instagram @madein.shaina.
-6. **Galerie** : les 6 photos de chiens de `images/galerie/` défilent en continu
+6. **Galerie** : les 8 photos de chiens de `images/galerie/` défilent en continu
    (pause au survol). Un clic agrandit la photo. Ce bandeau est aussi sur la page
    Qui suis-je.
 7. **Appel à l'action** « Parlons de votre chien », avec le lien Instagram

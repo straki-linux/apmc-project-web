@@ -782,7 +782,7 @@ ul {
 }
 
 .dog-strip-track {
-    --marquee-duration: 45s;
+    --marquee-duration: 60s;
     display: flex;
     width: max-content;
 }
