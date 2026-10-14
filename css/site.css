@@ -1307,11 +1307,14 @@ ul {
     }
 }
 
-/* Autres navigateurs : le contenu apparaît en douceur à l'arrivée sur la page */
-@supports not (view-transition-name: none) {
-    main {
-        animation: page-in .5s var(--ease) both;
-    }
+/* Navigateurs sans transitions natives entre pages (classe posée dans <head>) :
+   même effet, piloté par js/site.js (sortie au clic, entrée au chargement) */
+.no-vt main {
+    animation: page-in .5s var(--ease) both;
+}
+
+.no-vt.is-leaving main {
+    animation: page-out .22s cubic-bezier(.4, 0, 1, 1) both;
 }
 
 @media (prefers-reduced-motion: reduce) {

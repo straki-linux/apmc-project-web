@@ -125,6 +125,28 @@
             box.addEventListener('close', function () { links[index].focus(); });
         }
 
+        // Transitions de page de secours (navigateurs sans View Transitions entre
+        // pages) : le contenu s'efface avant de suivre un lien interne
+        var root = document.documentElement;
+        if (root.classList.contains('no-vt') && !reduceMotion) {
+            document.addEventListener('click', function (e) {
+                var a = e.target.closest('a[href]');
+                if (!a || e.defaultPrevented || e.button !== 0 ||
+                    e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+                if ((a.target && a.target !== '_self') || a.hasAttribute('download')) return;
+                var url = new URL(a.href, location.href);
+                if (url.origin !== location.origin || !/(\.html?|\/)$/.test(url.pathname)) return;
+                if (url.pathname === location.pathname && url.hash) return;
+                e.preventDefault();
+                root.classList.add('is-leaving');
+                setTimeout(function () { location.href = a.href; }, 220);
+            });
+            // Retour arrière depuis le cache du navigateur : réafficher la page
+            window.addEventListener('pageshow', function (e) {
+                if (e.persisted) root.classList.remove('is-leaving');
+            });
+        }
+
         // Année du copyright
         document.querySelectorAll('[data-year]').forEach(function (el) {
             el.textContent = new Date().getFullYear();

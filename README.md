@@ -84,10 +84,18 @@ Facebook. Elles utilisent toutes `css/site.css` et `js/site.js`.
 ## Transitions entre les pages
 
 Quand on change de page, l'en-tête reste en place pendant que le contenu
-s'efface puis réapparaît en glissant. Ce fondu utilise les View Transitions
-natives du navigateur (Chrome, Edge, Safari récents), en CSS seul, sans
-script. Sur les autres navigateurs, le contenu apparaît en fondu à l'arrivée.
-Tout est désactivé si le réglage « réduire les animations » est actif.
+s'efface puis réapparaît en glissant. L'effet est le même partout :
+
+- **Chrome, Edge, Opera, Brave, Samsung Internet, Safari 18.2+** : View
+  Transitions natives du navigateur, en CSS (`@view-transition`) ;
+- **Firefox et navigateurs plus anciens** : un petit script dans `<head>`
+  détecte l'absence de transitions natives et pose la classe `no-vt` sur
+  `<html>`. `js/site.js` fait alors disparaître le contenu au clic sur un lien
+  interne, puis la page suivante apparaît avec la même animation.
+
+Le retour arrière est géré (la page revient affichée). Les liens externes,
+mail, téléphone et la visionneuse ne sont pas concernés. Tout est désactivé si
+le réglage « réduire les animations » est actif.
 
 ## Fichiers
 
