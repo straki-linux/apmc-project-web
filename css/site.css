@@ -1121,7 +1121,7 @@ ul {
 
 /* ---------- Nos services ---------- */
 
-/* Services autour d'une grande photo ronde (comme l'ancien site) */
+/* Services autour d'une grande photo ronde (même rendu que l'ancien site) */
 .services-layout {
     display: grid;
     gap: 2.5rem;
@@ -1129,12 +1129,11 @@ ul {
 
 .services-photo {
     justify-self: center;
-    width: min(100%, 420px);
+    width: min(100%, 520px);
     aspect-ratio: 1;
     padding: 14px;
     border-radius: 50%;
-    background: var(--white);
-    box-shadow: 0 0 0 1px var(--line), var(--shadow-lg);
+    background: #eceef0;
 }
 
 .services-photo img {
@@ -1146,33 +1145,24 @@ ul {
 
 .service-list {
     display: grid;
-    gap: 1rem;
+    gap: 2.5rem;
 }
 
 .service {
     display: flex;
     align-items: flex-start;
-    gap: 1.25rem;
-    padding: 1.25rem;
-    border-radius: var(--radius);
+    gap: 1.5rem;
     color: var(--muted);
     text-decoration: none;
-    transition: background-color .3s, box-shadow .3s, transform .3s var(--ease);
-}
-
-.service:hover {
-    background: var(--white);
-    box-shadow: var(--shadow);
-    transform: translateY(-3px);
 }
 
 .service-icon {
     flex-shrink: 0;
-    width: 56px;
-    height: 56px;
+    width: 64px;
+    height: 64px;
     border-radius: 50%;
     object-fit: cover;
-    box-shadow: 0 0 0 3px var(--white), 0 0 0 5px var(--accent);
+    transition: transform .3s var(--ease);
 }
 
 .service-icon-svg {
@@ -1183,103 +1173,58 @@ ul {
 }
 
 .service-icon-svg svg {
-    width: 26px;
-    height: 26px;
+    width: 28px;
+    height: 28px;
 }
 
 .service h3 {
-    margin: .2rem 0 .4rem;
-    font-size: 1.25rem;
+    margin: .9rem 0 .8rem;
+    font-size: 1.4rem;
+    line-height: 1.15;
     color: var(--night);
+    transition: color .2s;
 }
 
 .service p {
-    margin: 0 0 .6rem;
+    margin: 0;
+    font-size: 1.08rem;
+    line-height: 1.7;
 }
 
-.service:hover .card-link span {
-    transform: translateX(4px);
+.service:hover h3 {
+    color: var(--accent-dark);
+}
+
+.service:hover .service-icon {
+    transform: scale(1.08);
 }
 
 /* Petit écran : la photo en premier, puis les services */
 @media (max-width: 999px) {
     .services-photo {
         order: -1;
-        width: min(100%, 300px);
+        width: min(100%, 320px);
     }
 }
 
 /* Grand écran : 3 services à gauche, la photo au centre, 3 à droite */
 @media (min-width: 1000px) {
     .services-layout {
-        grid-template-columns: 1fr minmax(320px, 400px) 1fr;
+        grid-template-columns: 1fr minmax(340px, 520px) 1fr;
         align-items: center;
-        gap: 2rem;
+        gap: 2.5rem;
+    }
+
+    /* Les deux colonnes ont la même hauteur et sont réparties pareil */
+    .service-list {
+        align-self: stretch;
+        align-content: space-around;
     }
 
     .service-list-left .service {
         flex-direction: row-reverse;
         text-align: right;
     }
-}
-
-.testimonials {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.75rem;
-}
-
-.testimonial {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 2.25rem 2rem;
-    background: var(--white);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-}
-
-.testimonial blockquote {
-    flex-grow: 1;
-    margin: 0 0 1.5rem;
-    font-size: 1.05rem;
-    color: var(--ink);
-}
-
-.testimonial blockquote::before {
-    content: "“";
-    display: block;
-    height: 2.4rem;
-    font-family: var(--font-display);
-    font-size: 4rem;
-    line-height: 1;
-    color: var(--accent);
-}
-
-.testimonial figcaption {
-    display: flex;
-    align-items: center;
-    gap: .9rem;
-    font-weight: 600;
-    color: var(--night);
-}
-
-.testimonial figcaption small {
-    display: block;
-    font-weight: 400;
-    color: var(--muted);
-}
-
-.avatar {
-    display: grid;
-    place-items: center;
-    width: 48px;
-    height: 48px;
-    flex-shrink: 0;
-    border-radius: 50%;
-    background: var(--night);
-    color: var(--accent);
-    font-weight: 700;
 }
 
 /* ---------- Contact ---------- */
