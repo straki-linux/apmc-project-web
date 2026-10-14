@@ -98,6 +98,13 @@ Le retour arrière est géré (la page revient affichée). Les liens externes,
 mail, téléphone et la visionneuse ne sont pas concernés. Tout est désactivé si
 le réglage « réduire les animations » est actif.
 
+## Mise à jour du style et des scripts
+
+Les pages chargent `css/site.css?v=…` et `js/site.js?v=…`. Après une
+modification de ces fichiers, il faut changer ce numéro dans les 4 pages, par
+exemple avec l'identifiant court du dernier commit. Sinon, les navigateurs
+peuvent garder l'ancienne version en cache.
+
 ## Fichiers
 
 Toutes les images utilisées sont dans le dépôt (`images/`). Il reste deux choses
