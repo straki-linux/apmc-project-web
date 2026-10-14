@@ -81,19 +81,23 @@
             reveals.forEach(function (el) { el.classList.add('is-visible'); });
         }
 
-        // Bandeau des partenaires qui défile (liste dupliquée pour une boucle continue)
-        var track = document.querySelector('[data-marquee]');
-        if (track && !reduceMotion) {
+        // Bandeaux qui défilent (photos de chiens, partenaires) :
+        // la liste est dupliquée pour une boucle continue
+        document.querySelectorAll('[data-marquee]').forEach(function (track) {
+            if (reduceMotion) return;
             var copy = track.firstElementChild.cloneNode(true);
             copy.setAttribute('aria-hidden', 'true');
             copy.querySelectorAll('img').forEach(function (img) { img.alt = ''; });
+            copy.querySelectorAll('a').forEach(function (a) { a.setAttribute('tabindex', '-1'); });
             track.appendChild(copy);
             track.classList.add('is-animated');
-        }
+        });
 
         // Visionneuse de la galerie
         var box = document.querySelector('[data-lightbox]');
-        var links = Array.prototype.slice.call(document.querySelectorAll('[data-gallery] a'));
+        var allLinks = Array.prototype.slice.call(document.querySelectorAll('[data-gallery] a'));
+        // Les copies du bandeau défilant ouvrent la même photo que l'original
+        var links = allLinks.filter(function (a) { return !a.closest('[aria-hidden="true"]'); });
         if (box && typeof box.showModal === 'function' && links.length) {
             var img = box.querySelector('[data-lightbox-img]');
             var index = 0;
@@ -102,10 +106,11 @@
                 img.src = links[index].getAttribute('href');
                 img.alt = links[index].querySelector('img').alt;
             }
-            links.forEach(function (link, i) {
+            var hrefs = links.map(function (a) { return a.getAttribute('href'); });
+            allLinks.forEach(function (link) {
                 link.addEventListener('click', function (e) {
                     e.preventDefault();
-                    show(i);
+                    show(hrefs.indexOf(link.getAttribute('href')));
                     box.showModal();
                 });
             });

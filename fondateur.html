@@ -101,6 +101,28 @@
             </div>
         </section>
 
+        <!-- Galerie -->
+        <section class="section section-alt" aria-labelledby="titre-galerie">
+            <div class="container">
+                <div class="section-head">
+                    <p class="eyebrow eyebrow-dark">En images</p>
+                    <h2 id="titre-galerie">Nos chiens à l'honneur</h2>
+                </div>
+            </div>
+            <div class="dog-strip">
+                <div class="dog-strip-track" data-marquee data-gallery>
+                    <ul>
+                        <li><a href="images/galerie/chien-1.jpg"><img src="images/galerie/chien-1.jpg" alt="Chien loup debout dans une rivière" width="600" height="600" decoding="async"></a></li>
+                        <li><a href="images/galerie/chien-2.jpg"><img src="images/galerie/chien-2.jpg" alt="Chien couché dans les hautes herbes" width="600" height="600" decoding="async"></a></li>
+                        <li><a href="images/galerie/chien-3.jpg"><img src="images/galerie/chien-3.jpg" alt="Berger allemand couché dans l'herbe" width="600" height="600" decoding="async"></a></li>
+                        <li><a href="images/galerie/chien-4.jpg"><img src="images/galerie/chien-4.jpg" alt="Deux chiens tout sourire en voiture" width="600" height="600" decoding="async"></a></li>
+                        <li><a href="images/galerie/chien-5.jpg"><img src="images/galerie/chien-5.jpg" alt="Chien portant des lunettes de protection" width="600" height="600" decoding="async"></a></li>
+                        <li><a href="images/galerie/chien-6.jpg"><img src="images/galerie/chien-6.jpg" alt="Trois chiens autour d'un bac d'eau dans un pré" width="600" height="600" decoding="async"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
         <!-- Appel à l'action -->
         <section class="cta" aria-labelledby="titre-cta">
             <div class="container">
@@ -119,7 +141,8 @@
         </section>
 
         <!-- Partenaires -->
-        <section class="partners" aria-label="Nos partenaires">
+        <section class="partners" aria-labelledby="titre-partenaires">
+            <p class="partners-title" id="titre-partenaires">Nos partenaires</p>
             <div class="partners-track" data-marquee>
                 <ul>
                     <li><img src="images/partners/01.jpg" alt="Logo partenaire 1" loading="lazy"></li>
@@ -167,6 +190,14 @@
             </div>
         </div>
     </footer>
+
+    <!-- Visionneuse de la galerie -->
+    <dialog class="lightbox" aria-label="Photo agrandie" data-lightbox>
+        <button type="button" class="lightbox-close" aria-label="Fermer" data-lightbox-close>×</button>
+        <button type="button" class="lightbox-prev" aria-label="Photo précédente" data-lightbox-prev>‹</button>
+        <img src="" alt="" data-lightbox-img>
+        <button type="button" class="lightbox-next" aria-label="Photo suivante" data-lightbox-next>›</button>
+    </dialog>
 </body>
 
 </html>

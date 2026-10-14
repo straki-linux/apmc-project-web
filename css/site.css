@@ -633,47 +633,6 @@ ul {
     transform: translateX(5px);
 }
 
-/* ---------- Galerie ---------- */
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: .75rem;
-}
-
-.gallery a {
-    display: block;
-    height: 100%;
-    overflow: hidden;
-    border-radius: var(--radius);
-    aspect-ratio: 1;
-    background: var(--line);
-}
-
-.gallery img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform .6s var(--ease);
-}
-
-.gallery a:hover img {
-    transform: scale(1.06);
-}
-
-/* Première photo en grand (2×2) : 2 photos à droite, 3 en dessous */
-@media (min-width: 760px) {
-    .gallery {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.25rem;
-    }
-
-    .gallery li:first-child {
-        grid-column: span 2;
-        grid-row: span 2;
-    }
-}
-
 /* ---------- Qui suis-je ---------- */
 
 .about {
@@ -816,6 +775,45 @@ ul {
     }
 }
 
+/* ---------- Bandeau de photos de chiens ---------- */
+
+.dog-strip {
+    overflow: hidden;
+    padding: .5rem 0;
+}
+
+.dog-strip-track {
+    --marquee-duration: 45s;
+    display: flex;
+    width: max-content;
+}
+
+.dog-strip-track ul {
+    display: flex;
+    gap: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+.dog-strip a {
+    display: block;
+    width: clamp(200px, 24vw, 300px);
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: var(--radius);
+    background: var(--line);
+}
+
+.dog-strip img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .6s var(--ease);
+}
+
+.dog-strip a:hover img {
+    transform: scale(1.06);
+}
+
 /* ---------- Visionneuse ---------- */
 
 .lightbox {
@@ -931,27 +929,43 @@ ul {
     padding-right: 4rem;
 }
 
-.partners-track.is-animated {
-    animation: marquee 30s linear infinite;
+.partners-track.is-animated,
+.dog-strip-track.is-animated {
+    animation: marquee var(--marquee-duration, 30s) linear infinite;
 }
 
-.partners-track.is-animated:hover {
+.partners-track.is-animated:hover,
+.dog-strip-track.is-animated:hover,
+.dog-strip-track.is-animated:focus-within {
     animation-play-state: paused;
 }
 
+/* Sans animation (réglage « réduire les animations ») : défilement à la main */
+.partners:not(:has(.is-animated)),
+.dog-strip:not(:has(.is-animated)) {
+    overflow-x: auto;
+}
+
+.partners-title {
+    margin: 0 0 2rem;
+    text-align: center;
+    font-size: .85rem;
+    font-weight: 600;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--accent-dark);
+}
+
 .partners img {
-    height: 70px;
+    height: 80px;
     width: auto;
-    max-width: 180px;
+    max-width: 200px;
     object-fit: contain;
-    filter: grayscale(1);
-    opacity: .7;
-    transition: filter .3s, opacity .3s;
+    transition: transform .3s var(--ease);
 }
 
 .partners img:hover {
-    filter: none;
-    opacity: 1;
+    transform: scale(1.08);
 }
 
 @keyframes marquee {
