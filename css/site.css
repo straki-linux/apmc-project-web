@@ -954,6 +954,20 @@ ul {
     color: var(--accent-dark);
 }
 
+/* Noms des partenaires (en attendant les fichiers de leurs logos) */
+.partner-name {
+    font-family: var(--font-display);
+    font-size: clamp(1.3rem, 2.5vw, 1.75rem);
+    font-weight: 700;
+    white-space: nowrap;
+    color: var(--muted);
+    transition: color .3s;
+}
+
+.partner-name:hover {
+    color: var(--night);
+}
+
 .partners img {
     height: 80px;
     width: auto;

@@ -22,7 +22,7 @@ plugins. Elle n'utilise que :
 
 1. **En-tête fixe** : il devient opaque au défilement. Sur mobile, un menu
    s'ouvre avec le bouton ☰ et se ferme avec Échap.
-2. **Héro plein écran** : fondu entre `ACCUEIL3.jpg` et `ACCUEIL2.jpg`, avec le
+2. **Héro plein écran** : fondu entre `images/accueil-1.jpg` et `images/accueil-2.jpg`, avec le
    titre « Des milliers de chiens et leurs propriétaires nous font confiance ».
 3. **Chiffres clés** : 2593 clients, 2764 chiens et 22 ans, animés à l'apparition.
 4. **Cartes** : Qui suis-je ?, Nos services et Contact.
@@ -35,7 +35,10 @@ plugins. Elle n'utilise que :
    Qui suis-je.
 7. **Appel à l'action** « Parlons de votre chien », avec le lien Instagram
    @eduquermonchien.
-8. **Partenaires** : bandeau « Nos partenaires » qui défile, logos en couleur, sur toutes les pages.
+8. **Partenaires** : bandeau « Nos partenaires » qui défile sur toutes les pages.
+   Il affiche pour l'instant les noms (Purina Dog Chow, Purina Pro Plan,
+   Belcando, Leonardo, Made In Shaïna, The Canny Company). Les fichiers de leurs
+   logos restent à ajouter dans `images/partners/`.
 9. **Pied de page** : liens, Instagram et copyright.
 
 ### Qualité
@@ -78,12 +81,12 @@ Facebook. Elles utilisent toutes `css/site.css` et `js/site.js`.
 - **`contact.html`** : l'adresse, le téléphone et l'email (cliquables), les
   horaires, les réseaux sociaux et une carte Google Maps de l'adresse.
 
-## Fichiers nécessaires
+## Fichiers
 
-Ces fichiers du site existant doivent être présents avec les mêmes chemins :
+Toutes les images utilisées sont dans le dépôt (`images/`). Il reste deux choses
+hors du dépôt :
 
-- `images/` : `ACCUEIL2.jpg`, `ACCUEIL3.jpg`,
-  `partners/01–04.jpg`, `partners/05–06.png` ;
+- les logos des partenaires, à ajouter dans `images/partners/` ;
 - les pages de détail des services, toujours dans l'ancien thème :
   `cours-individuels-d-education-canine.html`, `education-en-ville.html`,
   `rappel-au-maitre.html`, `problemes-comportementaux.html`,
