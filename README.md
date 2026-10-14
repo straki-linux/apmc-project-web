@@ -37,6 +37,7 @@ doivent être ajoutés au dépôt avec les mêmes chemins :
   couleurs du thème (saumon `#ed8e82`, turquoise `#54c1c4`, bleu nuit `#0a272c`).
 - **Correctif CSS** : le `bootstrap.min.css` du site n'a pas de `margin-right: -15px`
   sur `.row` (contenu légèrement décalé à gauche) ; corrigé dans `custom.css`.
+- **Instagram** : lien vers @eduquermonchien (pied de page, bandeau d'appel à l'action, données structurées `sameAs`).
 - **Contenu** : section « Découvrir » (Qui suis-je, Services, Contact),
   appel à l'action « Parlons de votre chien », liens dans le pied de page,
   année du copyright mise à jour automatiquement.

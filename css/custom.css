@@ -135,6 +135,17 @@ button:focus-visible,
     margin-bottom: 20px;
 }
 
+.home-cta__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px 30px;
+}
+
+.home-cta__buttons .fa {
+    margin-right: 6px;
+}
+
 /* ---------- Pied de page ---------- */
 
 .footer-links {
@@ -145,4 +156,14 @@ button:focus-visible,
     margin: 0 0 6px;
     padding: 0;
     list-style: none;
+}
+
+/* ---------- Réseaux sociaux ---------- */
+
+.footer-social {
+    margin: 4px 0 10px;
+}
+
+.footer-social a.fa:hover {
+    color: #ed8e82;
 }
