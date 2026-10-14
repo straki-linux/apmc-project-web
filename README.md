@@ -76,8 +76,9 @@ Facebook. Elles utilisent toutes `css/site.css` et `js/site.js`.
   Le sérieux », les liens Instagram @eduquermonchien, Facebook et Instagram
   @madein.shaina, l'appel à l'action et les partenaires.
 - **`nos-services.html`** : le texte d'introduction, les 6 services (liens vers
-  leurs pages détaillées) et les 3 avis clients, avec les initiales à la place
-  des photos.
+  leurs pages détaillées) et les 3 avis clients avec la photo de Sam Hatami et de
+  Hamlet Navassartian (`images/avis/`), et un « J » pour Jeremy Benero, qui n'a
+  pas de photo de profil.
 - **`contact.html`** : l'adresse, le téléphone et l'email (cliquables), les
   horaires, les réseaux sociaux et une carte Google Maps de l'adresse.
 
