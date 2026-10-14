@@ -26,12 +26,15 @@ plugins. Elle n'utilise que :
    titre « Des milliers de chiens et leurs propriétaires nous font confiance ».
 3. **Chiffres clés** : 2593 clients, 2764 chiens et 22 ans, animés à l'apparition.
 4. **Cartes** : Qui suis-je ?, Nos services et Contact.
-5. **Galerie** : les 5 photos de chiens de `images/galerie/` (ajoutées au dépôt),
-   en mosaïque (une grande et quatre petites), qui s'agrandissent au clic.
-6. **Appel à l'action** « Parlons de votre chien », avec le lien Instagram
+5. **Qui suis-je ?** : photo `images/fondateur-chiens.jpg` avec le badge
+   « La passion · La qualité · Le sérieux » (`images/badge-valeurs.png`) et un
+   lien vers `fondateur.html`.
+6. **Galerie** : les 6 photos de chiens de `images/galerie/`, en mosaïque (une
+   grande, deux à côté, trois en dessous), qui s'agrandissent au clic.
+7. **Appel à l'action** « Parlons de votre chien », avec le lien Instagram
    @eduquermonchien.
-7. **Partenaires** : bandeau défilant.
-8. **Pied de page** : liens, Instagram et copyright.
+8. **Partenaires** : bandeau défilant.
+9. **Pied de page** : liens, Instagram et copyright.
 
 ### Qualité
 
