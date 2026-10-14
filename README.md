@@ -28,7 +28,8 @@ plugins. Elle n'utilise que :
 4. **Cartes** : Qui suis-je ?, Nos services et Contact.
 5. **Qui suis-je ?** : photo `images/fondateur-chiens.jpg` avec le badge
    « La passion · La qualité · Le sérieux » (`images/badge-valeurs.png`) et un
-   lien vers `fondateur.html`.
+   lien vers `fondateur.html`, suivis des liens Instagram @eduquermonchien,
+   Facebook et Instagram @madein.shaina.
 6. **Galerie** : les 6 photos de chiens de `images/galerie/`, en mosaïque (une
    grande, deux à côté, trois en dessous), qui s'agrandissent au clic.
 7. **Appel à l'action** « Parlons de votre chien », avec le lien Instagram
