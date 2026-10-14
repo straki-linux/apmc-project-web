@@ -1266,3 +1266,60 @@ ul {
     display: flex;
     gap: .6rem;
 }
+
+/* ==========================================================================
+   Transitions entre les pages
+   ========================================================================== */
+
+/* Navigateurs récents : fondu enchaîné natif entre deux pages du site.
+   L'en-tête reste en place, seul le contenu glisse et apparaît. */
+@view-transition {
+    navigation: auto;
+}
+
+.site-header {
+    view-transition-name: site-header;
+}
+
+::view-transition-group(site-header) {
+    animation-duration: 0s;
+}
+
+::view-transition-old(root) {
+    animation: page-out .22s cubic-bezier(.4, 0, 1, 1) both;
+}
+
+::view-transition-new(root) {
+    animation: page-in .5s var(--ease) both;
+}
+
+@keyframes page-out {
+    to {
+        opacity: 0;
+        transform: translateY(-14px);
+    }
+}
+
+@keyframes page-in {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+}
+
+/* Autres navigateurs : le contenu apparaît en douceur à l'arrivée sur la page */
+@supports not (view-transition-name: none) {
+    main {
+        animation: page-in .5s var(--ease) both;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    @view-transition {
+        navigation: none;
+    }
+
+    main {
+        animation: none;
+    }
+}

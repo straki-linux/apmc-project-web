@@ -81,6 +81,14 @@ Facebook. Elles utilisent toutes `css/site.css` et `js/site.js`.
 - **`contact.html`** : l'adresse, le téléphone et l'email (cliquables), les
   horaires, les réseaux sociaux et une carte Google Maps de l'adresse.
 
+## Transitions entre les pages
+
+Quand on change de page, l'en-tête reste en place pendant que le contenu
+s'efface puis réapparaît en glissant. Ce fondu utilise les View Transitions
+natives du navigateur (Chrome, Edge, Safari récents), en CSS seul, sans
+script. Sur les autres navigateurs, le contenu apparaît en fondu à l'arrivée.
+Tout est désactivé si le réglage « réduire les animations » est actif.
+
 ## Fichiers
 
 Toutes les images utilisées sont dans le dépôt (`images/`). Il reste deux choses
